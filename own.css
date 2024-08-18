@@ -1,0 +1,1833 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    width:100%;
+    /* Center vertically */
+    height: 50px;
+    /* Make the header take the full viewport height */
+    background-color: transparent;
+    /* Light background color */
+    padding: 10px 20px;
+    /* Padding for the header */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.144);
+    /* Border at the bottom of the header */
+    position: fixed;
+    z-index: 11;
+    transition: 0.3s;
+}
+.header.scrolled{
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 2px 10px rgb(19, 19, 19);
+    border-bottom: none;
+    transition: 0.3s;
+}
+
+.navbox{
+    width: 1100px;
+    display:flex;
+    position: relative;
+}
+
+.set1 {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.wildvine .logo {
+    font-size: 39px;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: var(--font2);
+}
+
+.lang-option {
+    margin-left: 20px;
+    transform: translateY(1.3vh);
+    padding: 5px;
+    color: white;
+    font-size: 14px;
+    border: none;
+    background-color: transparent;
+    outline-style: none;
+}
+option{
+    color: black;
+}
+
+/* navigation */
+
+.popup{
+    display: none;
+}
+
+.navbar-list {
+    list-style: none;
+    padding: 0;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+    transform: translatey(-23px);
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+}
+.navbar-list li::after{
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: white;
+    /* Color of the underline */
+    transition: width 0.3s ease;
+}
+
+.navbar-list li:hover::after{
+    width: 100%;
+}
+
+.header.scrolled .navtext {
+    color: #ffffffa1;
+}
+.navbar-list li:hover .navtext{
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 200px;
+    top: 25px;
+}
+
+.navbar-list li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.navbar-link {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    line-height: 70px;
+}
+.navtext{
+    color: white;
+    font-size: 16px;
+    padding: 0;
+}
+
+/*   end   */
+
+.action-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 2px;
+    top: 15px;
+}
+
+.search,
+.donation,
+.menuopen,
+.closebtn {
+    background: none;
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    outline-style: none;
+}
+.closebtn{
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px; 
+}
+.search .searchi i {
+    font-size: 20px;
+    color: white;
+}
+.menuopen{
+    display: none;
+}
+.popuplist{
+    line-height: 60px;
+}
+
+.closebtn {
+    font-size: 40px;
+}
+.search{
+    transform: translateX(-5vh);
+}
+
+.donation {
+    background-color: rgb(207, 137, 58);
+    box-shadow: 5px 5px 3px rgba(255, 136, 0, 0.562);
+    color: white;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: transparent;
+    transition: 0.2s;
+}
+
+.donationtext {
+    margin-right: 5px;
+}
+
+.donation i {
+    font-size: 13px;
+}
+.donation:hover{
+    box-shadow: none;
+}
+
+/* contend */
+
+/* hero */
+.hero {
+    background-image: url("assets/hero.jpg");
+    height: 800px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+/* end */
+
+.herobox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1050px;
+    height: 400px;
+    position: relative;
+    transform: translateY(-60px);
+
+}
+.welcome, .welcome i,.loveline,.strayline,.tagline:hover{
+    cursor: default;
+}
+
+.welcome {
+    position: absolute;
+    color: white;
+    top: 0;
+    left: 0;
+}
+
+.welcome i {
+    margin-right: 8px;
+}
+
+.loveline {
+    top:60px;
+    left: 0;
+    position: absolute;
+    color: white;
+    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.strayline {
+    position: absolute;
+    top: 120px;
+    left: 0;
+    color: white;
+    font-size: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.tagline {
+    position: absolute;
+    top: 230px;
+    left: 0;
+    color: white;
+    display: flex;
+    width: 500px;
+    font-weight: 200;
+}
+
+.donation-hero {
+    box-shadow: 5px 5px 3px rgba(255, 136, 0, 0.562);
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border-color: transparent;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    color: white;
+    background-color: rgb(207, 137, 58);
+}
+
+.donation-hero i {
+    color: white;
+}
+
+.donation-hero:hover {
+    box-shadow: 0px 0px;
+}
+
+.heroobj {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    bottom: 80px;
+    background-color: rgba(0, 0, 0, 0.521);
+    border-radius: 20px;
+    width: 1000px;
+    height: 100px;
+}
+
+.promies1 {
+    position: relative;
+    width: 190px;
+    height: 80px;
+}
+
+.promies1 span {
+    color: rgb(185, 122, 49);
+    font-size: 40px;
+    position: absolute;
+    top: 7px;
+    font-weight: 250;
+}
+
+.promies1 p {
+    margin-top: 7px;
+    margin-left: 45px;
+}
+
+.box2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    height: 80px;
+}
+
+.para {
+    margin-left: 45px;
+    font-weight: 200;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.514);
+}
+
+.promies,
+.promies1 span:hover {
+    cursor: default;
+}
+
+
+/* about us */
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* background-color: rgba(121, 224, 73, 0.438); */
+    width: 100%;
+    height: fit-content;
+    transform: translateY(50px);
+}
+
+.about1 {
+    height: 850px;
+    width: 600px;
+    background-color: white;
+    position: relative;
+    z-index: 2;
+    margin: 15px;
+}
+
+/* 
+.about2{
+    position: relative;
+    background-color: white;
+    height: 850px;
+    width: 500px;
+    z-index: 2;
+    margin: 15px;
+} */
+img {
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+    z-index: 2;
+}
+
+.img2 {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.img4 {
+    height: 520px;
+    width: 290px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.img1 {
+    position: absolute;
+    left: 0;
+    top: 290px;
+}
+
+.img3 {
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+}
+
+.img5 {
+    height: 270px;
+    width: 270px;
+    position: absolute;
+    right: 0px;
+}
+
+.dotimg {
+    z-index: 1;
+    display: inline;
+    width: 50px;
+    position: absolute;
+    left: 0;
+    padding: 0;
+}
+
+.about2 {
+    position: relative;
+    background-color: white;
+    height: 850px;
+    width: 500px;
+    z-index: 2;
+    margin: 15px;
+    padding: 20px;
+    /* Add padding to the entire box */
+}
+
+.why {
+    padding: 20px;
+    color: rgb(207, 131, 45);
+}
+
+.why i {
+    margin-right: 5px;
+}
+
+.aboutline {
+    position: absolute;
+    left: 20px;
+    /* Adjusted padding-left to left position */
+    top: 80px;
+}
+
+.aboutline1 {
+    font-weight: 200;
+    font-size: 40px;
+}
+
+.aboutline2 {
+    transform: translateY(5px);
+    font-family: var(--font);
+    /* Assuming --font is defined elsewhere */
+    font-weight: 600;
+    font-size: 40px;
+}
+
+.about2 h2 {
+    display: inline-block;
+    position: relative;
+    top: 175px;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: default;
+    background: rgb(255, 214, 160);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.about2 h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    /* Thickness of the underline */
+    background-color: var(--mycolor);
+    /* Color of the underline */
+    transition: width 0.3s ease;
+}
+
+.about2 h2:hover::after {
+    width: 100%;
+}
+
+.about2 button {
+    position: absolute;
+    bottom: 80px;
+    width: 180px;
+    height: 50px;
+    left: 0px;
+    margin-left: 45px;
+    background-color: black;
+    transition: 0.3s;
+}
+
+.about2 button i {
+    color: white;
+}
+
+.about2 button:hover {
+    border-radius: 20px;
+}
+
+.about2 p {
+    padding: 25px;
+    color: rgba(0, 0, 0, 0.596);
+    font-size: 18px;
+    /* Adjust font size as needed */
+    line-height: 1.5;
+    /* Ensure proper line height for readability */
+    position: absolute;
+    bottom: 370px;
+    left: 0;
+}
+
+.about2 ul {
+    padding: 20px 0 0 0;
+    /* Adjust padding as needed */
+    font-size: 20px;
+    list-style-type: var();
+    /* Remove default list styling */
+    position: absolute;
+    bottom: 180px;
+
+}
+
+.about2 ul li {
+    margin-bottom: 10px;
+    /* Adjust margin between list items */
+    list-style: none;
+}
+
+.about2 ul li {
+    cursor: default;
+}
+
+.about2 ul li::before {
+    content: "✔";
+    margin-right: 10px;
+    color: rgb(6, 156, 6);
+}
+.donationtext{
+    color: white;
+}
+
+/* end */
+
+/* pattern */
+
+.partnerbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    /* background-color: rgba(36, 255, 36, 0.397); */
+    margin-top: 10px;
+}
+
+.partnerbox img {
+    width: 500px;
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.partnerbox div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--mycolor);
+    width: 600px;
+    height: 280px;
+}
+
+.partnerbox div p {
+    transform: translateY(-30px);
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.partnerbox div button {
+    position: absolute;
+    bottom: 80px;
+    text-align: center;
+    width: 250px;
+    height: 50px;
+    color: white;
+    border-style: solid;
+    border-color: white;
+    border-bottom-color: rgb(255, 255, 255);
+    background-color: transparent;
+}
+
+.partnerbox div button span {
+    text-align: center;
+}
+
+.partnerbox div button i {
+    margin-left: 7px;
+    font-size: 15px;
+}
+
+/* end */
+
+/* what we do */
+
+.what {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: fit-content;
+    margin-top: 10px;
+    padding-bottom: 40px;
+}
+
+.whatbox1 {
+    margin-top: 20px;
+    width: 1140px;
+    height: fit-content;
+    background-color: white;
+    font: var(--font);
+}
+
+.what div span {
+    color: var(--mycolor);
+    font-size: 18px;
+}
+
+.what div span:hover {
+    cursor: default;
+}
+
+.what div span i {
+    margin-right: 7px;
+    font-size: 25px;
+}
+
+.what h1 {
+    font-size: 40px;
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+.what h2 {
+    font-size: 40px;
+    transform: translateY(-10px);
+    font-weight: 500;
+    font-family: var(--font);
+}
+
+.dobox {
+    transform: translateY(30px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Allows items to wrap if needed */
+    gap: 30px;
+    /* Adds space between items */
+    width: auto;
+    height: max-content;
+    /* background-color: rgba(229, 255, 0, 0.466); */
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.dobox1 {
+    text-align: center;
+    width: 250px;
+    /* Adjust width as needed */
+    height: 250px;
+    /* Adjust height as needed */
+    background-color: white;
+    /* Add a background color for better visibility */
+    padding: 10px;
+    /* Optional: add padding */
+    box-sizing: border-box;
+    /* Include padding in width/height calculation */
+    border: 2px, solid;
+    border-radius: 5px;
+    border-color: rgba(185, 185, 185, 0.37);
+    transition: 0.3s ease;
+}
+
+.dobox1:hover {
+    border: 2px, solid;
+    border-radius: 5px;
+    border-color: var(--mycolor);
+    box-shadow: none;
+}
+.dobox2:hover {
+    box-shadow: none;
+}
+
+.dobox1 div {
+    transform: translateY(60px);
+    color: rgba(0, 0, 0, 0.623);
+}
+
+.dobox1 p {
+    transform: translateY(40px);
+    padding: 5px;
+}
+
+.dobox1 h3 {
+    transform: translateY(20px);
+}
+
+.dobox1 i {
+    color: green;
+    transform: translateY(7px);
+    font-size: 30px;
+}
+
+.dobox1 div i {
+    transform: translateY(0px);
+    color: rgba(0, 0, 0, 0.623);
+    font-size: medium;
+}
+
+.dobox1 i span {
+    color: green;
+    transform: translateY(7px);
+    font-size: 30px;
+}
+.dobox1{
+    box-shadow: 2px 2px 10px rgb(199, 199, 199);
+}
+
+.dobox2 {
+    text-align: center;
+    width: 250px;
+    /* Adjust width as needed */
+    height: 250px;
+    /* Adjust height as needed */
+    background-color: white;
+    /* Add a background color for better visibility */
+    padding: 10px;
+    /* Optional: add padding */
+    box-sizing: border-box;
+    /* Include padding in width/height calculation */
+    border: 2px, solid;
+    border-radius: 5px;
+    border-color: rgba(185, 185, 185, 0.37);
+    transition: 0.3s ease;
+    box-shadow: 2px 2px 10px rgb(199, 199, 199);
+}
+
+.dobox2:hover {
+    border: 2px, solid;
+    border-radius: 5px;
+    border-color: var(--mycolor);
+}
+
+.dobox2 div {
+    transform: translateY(60px);
+    color: rgba(0, 0, 0, 0.623);
+}
+
+.dobox2 p {
+    transform: translateY(40px);
+    padding: 5px;
+}
+
+.dobox2 h3 {
+    transform: translateY(20px);
+}
+
+.dobox2 i {
+    color: green;
+    transform: translateY(7px);
+    font-size: 30px;
+}
+
+.dobox2 div i {
+    transform: translateY(0px);
+    color: rgba(0, 0, 0, 0.623);
+    font-size: medium;
+}
+
+.dobox2 i span {
+    color: green;
+    transform: translateY(7px);
+    font-size: 40px;
+}
+
+.dobox2 h3 {
+    transform: translateY(-1px);
+    margin-top: 10px;
+}
+
+.dobox2 p {
+    transform: translateY(-2px);
+    margin-top: 14px;
+}
+
+.dobox2 a div {
+    transform: translateY(-7px);
+    margin-top: 48px;
+}
+
+/* end */
+
+/* fund rise */
+
+.fr-base{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.fundrise{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    height: max-content;
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+.overbox{
+    margin: 10px;
+    width: 540px;
+    height: 400px;
+    display: flex;
+    box-shadow: 0px 1px 10px rgb(163, 163, 163);
+
+}
+.overbox img{
+    width: 350px;
+    height: 300px;
+    z-index: 1;
+}
+.f-list{
+    display: flex;
+    position: absolute;
+    bottom: 60px;
+}
+.f-list li{
+    margin-right: 20px;
+    list-style: none;
+    font-size: 14px;
+}
+.f-list .num1{
+    color: rgb(52, 168, 52);
+    font-weight: bolder;
+}
+.f-list .num2{
+    color: rgb(211, 166, 42);
+    font-weight: bolder;
+}
+.f-list .num3{
+    color: rgb(52, 112, 168);
+    font-weight: bolder;
+}
+.f{
+    padding: 20px;
+    display:flex;
+    background-color: white;
+    width: 300px;
+    height: 150px;
+    position: relative;
+    z-index: 2;
+    transform: translateX(-200px);
+    margin-top: 210px;
+}
+.f h2{
+    position: absolute;
+    top: 55px;
+    font-size: 20px;
+}
+.f button{
+    background-color: rgb(0, 0, 0);
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.493);
+    color: white;
+    font-size: 11px;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    border-color: transparent;
+    transition: 0.2s;
+    position: absolute;
+    bottom: 20px;
+}
+.f button:hover{
+    box-shadow: none;
+    background-color: rgb(47, 155, 47);
+}
+.f2{
+    display: flex;
+    width: 400px;
+    height: 50px;
+    position: relative;
+    transform: translateY(-20px);
+}
+.f2::before{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    height: 5px;
+    background-color: rgba(194, 194, 194, 0.808);
+    z-index: 1;
+}
+.f2::after{
+    content: "";
+    position: absolute;
+    bottom: 5px;
+    width: 83%;
+    height: 5px;
+    background-color: rgb(30, 156, 30);
+    z-index: 2;
+}
+.f2 span{
+    position: absolute;
+    top: 10px;
+}
+.f2 h4{
+    position: absolute;
+    top: 10px;
+}
+.f2 p{
+    position: absolute;
+    top: 10px;
+}
+.f2 h4{
+    position: absolute;
+    left: 60px;
+}
+.f2 p{
+    position: absolute;
+    right: 0;
+    color: rgb(30, 156, 30);
+}
+
+
+/* end */
+
+/* people */
+
+.people{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+    /* background-color: rgb(140, 255, 140); */
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.people img{
+    padding: 0;
+    width: 600px;
+    height: 500px;
+}
+.peoplebox1{
+    width: 600px;
+    height: 500px;
+    background: rgb(41, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.peoplebox2{
+    width: 550px;
+    height: 450px;
+    /* background-color: rgba(153, 205, 50, 0.678); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.peoplebox2 p{
+    top: 0;
+    left: 0;
+    position: absolute;
+    color: var(--mycolor);
+}
+.peoplebox2 p i{
+    margin-right: 7px;
+}
+.peoplebox2 h2{
+    position: absolute;
+    top: 40px;
+    left: 0;
+    font-weight: 250;
+    font-size: 40px;
+    color: white;
+}
+.peoplebox2 h3{
+    position: absolute;
+    top: 90px;
+    left: 0;
+    font-weight: 600;
+    font-size: 40px;
+    color: white;
+}
+.peoplebox2 span{
+    padding: 20px;
+    display: flex;
+    text-align: start;
+    align-items: center;
+    justify-content: center;
+    /* background-color: cornflowerblue; */
+    width: 450px;
+    height: fit-content;
+    position: absolute;
+    top: 160px;
+    border-bottom: 2px solid white;
+    color: white;
+}
+.peoplebox2 span i{
+    margin-right: 30px;
+    font-size: 50px;
+    color: white;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: fit-content;
+    position: absolute;
+    bottom: 40px;
+}
+.name h4{
+    color: white;
+}
+.name h5{
+    color: #a1a1a1;
+}
+/* end */
+
+/* event */
+
+.event{
+    /* background-color: burlywood; */
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.eventbox1{
+    text-align: center;
+    line-height: 60px;
+}
+.eventbox1 p{
+    color: var(--mycolor);
+    font-size: 20px;
+}
+.eventbox1 h2{
+    font-weight: 250;
+    font-size: 40px;
+}
+.eventbox1 h3{
+    font-size: 40px;
+}
+
+/* end */
+
+/* eventlist */
+
+.eventlist{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px; 
+}
+.eventlistbtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 50px;
+    margin-left: 45px;
+    background-color: black;
+    transition: 0.3s;
+    color: white;
+}
+
+.eventlistbtn i {
+    color: white;
+    margin-left: 5px;
+}
+
+.eventlistbtn:hover {
+    border-radius: 20px;
+    cursor: default;
+}
+.calender{
+    box-shadow: 0 5px 10px rgb(165, 164, 164);
+    background-color: var(--mycolor);
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    left: 10px;
+    font-size: 12px;
+}
+.eventlist ul li{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style:none;
+    width: 1100px;
+    height: 150px;
+    background-color: white;
+    border-radius: 10px;
+    border: 3px solid white;
+    transition: 0.3s;
+    margin: 20px;
+}
+.eventlist ul li:hover{
+    border-color: var(--mycolor);
+} 
+.eventcontent{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 450px;
+    height: fit-content;
+    position: absolute;
+    left: 100px;
+    padding: 10px;
+    line-height: 30px;
+}
+.eventcontent h3{
+    font-weight: 300;
+    font-size: 20px;
+}
+.timing{
+    position: absolute;
+    right: 20px;
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 5px;
+}
+.timing:hover{
+    cursor: default;
+}
+.timing i{
+    margin-right: 5px;
+}
+
+/* end */
+
+/* insta */
+
+.insta{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.insta ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around ;
+    align-items: center;
+}
+.insta ul li{
+    list-style: none;
+}
+.insta ul li img{
+    padding: 0;
+    width: 250px;
+    height: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* end */
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 200px;
+}
+.footerbox{
+    width: 900px;
+    height: 60px;
+    background-color: rgb(34, 34, 34);
+    color: white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.footerbox1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height:100px;
+}
+.footerbox1 p{
+    margin: 10px;
+}
+.footerbox2{
+    position: absolute;
+    right: 18px;
+}
+.footerbox2 h5 a:hover{
+    cursor: pointer;
+}
+.footerbox2 h5 a::after{
+    content: '';
+    bottom: 0;
+    height: 4px;
+    width: 100%;
+    background-color: white;
+}
+
+
+/* end */
+
+
+
+/* media quaries */
+
+@media screen and (max-width:1000px) {
+
+    .header{
+        width: 100%;
+        position: fixed;
+    }
+    /* navigation bar */
+    .navbar-list {
+        display: none;
+    }
+    .navbox{
+        width: 100%;
+    }
+    .navtext{
+        font-weight: 200;
+    }
+    .action-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 200px;
+    }
+    .menuopen{
+        font-size: 20px;
+        color: white;
+        margin-left: 30px;
+        display: block;
+        transition: 0.3s;  
+    }
+    .popup{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        height: 500px;
+        position: fixed;
+        top: 0;
+        z-index: 20;
+    }
+    .popup1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 500px;
+        height: 700px;
+        background-color: rgb(90, 90, 90);
+        position: relative;
+        z-index: 20;
+        text-align: center;
+        transition: 0.3s;
+    }
+    .popuplist{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        color: white;
+        line-height: 40px;
+    }
+    .navtext{
+        font-size: 25px;
+    }
+    .navtext::after{
+        display: block;
+        content: "";
+        width: 0;
+        height: 2px;
+        transform: translateY(-5px);
+        /* Thickness of the underline */
+        background-color: white;
+        /* Color of the underline */
+        transition: width 0.3s ease;
+    }
+    .popuplist li:hover .navtext::after{
+        width: 100%;
+    }
+    .overlay{
+        background-color: rgb(0, 0, 0);
+        opacity: 0.6;
+        width: 100%;
+        height: 100%;
+        z-index: 15;
+        position: fixed;
+        top: 0;
+        display: none;
+    }
+/* end */
+
+    .hero{
+        background-image: none;
+        background-color: rgb(37, 37, 37);
+        height: fit-content;
+        width: fit-content;
+        position: relative;
+    }
+    .heroobj{
+        margin-top: 100px;
+        width: 500px;
+        height: fit-content;
+        flex-wrap: wrap;
+    }
+    .herobox{
+        margin-top: 180px;
+        margin-left: 20px;
+        margin-bottom: 200px;
+    }
+    /* what */
+
+    .whatbox1{
+        width: 640px;
+        transform: translateX(-100px);
+
+    }
+
+    /* end */
+
+    /* event list */
+
+    .eventlist ul li {
+        width: 700px;
+        flex-wrap: wrap;
+    }
+    /* end */
+
+    .about1{
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 1500px;
+    }
+    .dotimg{
+        top: 0;
+    }
+    .img1,
+    .img2,
+    .img3,
+    .img4,
+    .img5{
+        position: static;
+    }
+
+}
+
+@media screen and (max-width:550px){
+    .navbox{
+        width: 550px;
+    }
+    .welcome{
+        font-size: 20px;
+    }
+    .menuopen{
+        font-size: 30px;
+    }
+    .strayline {
+        margin-top: 0px;
+        font-size: 40px;
+    }
+    .loveline {
+        width: 400px;
+        font-size: 40px;
+    }
+    .tagline{
+        font-size: 20px;
+        width: 400px;
+        margin-top: 0px;
+    }
+    .lang-option{
+        transform: translateY(1vh);
+    }
+    .action-btn{
+        right: 100px;
+    }
+    .heroobj{
+        /* left: 0; */
+        font: 10px;
+        width: 380px;
+        position: static;
+        position: absolute;
+        bottom: 50px;
+        height: fit-content;
+        margin: 0;
+    }
+    .promies1{
+        margin: 30px;
+    }
+    .hero{
+        height: 1200px;
+    }
+    .herobox {
+        width: 500px;
+        height: 450px;
+        margin-top: 0;
+        margin-bottom: 0;
+        transform: translateY(-270px);
+    }
+    .donation,
+    .search{
+        display: none;
+    }
+    .whatbox1{
+        transform: translateX(-20px);
+        width: 200px;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about1{
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: fit-content;
+    }
+    .img1,
+    .img2,
+    .img3,
+    .img5{
+        width: 200px;
+        height: 200px;
+    }
+    .img4{
+        width: 200px;
+        height: 350px;
+    }
+    .aboutline1,
+    .aboutline2,
+    .about h2{  
+        font-size: 35px
+    }
+    .aboutline2,
+    .aboutline1{
+        transform: translateY(-20px);
+    }
+
+    .about2{
+        padding: 0;
+        height: 600px;
+    }
+    .aboutline,
+    .aboutline1,
+    .about2 p{
+        left: 0;
+    }
+    .about2 h2 {
+        top: 100px;
+        width: 300px;
+        font-size: 20px;
+    }
+    .why{
+        padding-left: 0px;
+    }
+    .about2 p {
+        bottom: 250px;
+        padding: 0;
+        font-size: 15px;
+        width: 420px;
+    }
+    .about2 button{
+        margin-left: 0;
+        bottom: 30px;
+    }
+    .about2 ul{
+        bottom: 70px;
+    }
+    .about2 ul li{
+        font-size: 20px;
+    }
+    .about2 button{
+        bottom: 0;
+    }
+
+
+    .partnerbox{
+        flex-direction: column;
+        margin-top: 80px;
+        width: 100%;
+        padding: 10px;
+    }
+    .partnerbox img{
+        padding: 0;
+    }
+    .partnerbox div{
+        width: 500px;
+        height: 200px;
+        font-size: 20px;
+    }
+    .partnerbox div button{
+        bottom: 35px;
+    }
+
+    .what{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .what h2{
+        transform: translateY(0);
+    }
+    .whatbox1 {
+        transform: translateX(20px);
+        width: 450px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .what div span {
+        font-size: 23px;
+    }
+
+    .overbox img {
+        z-index: 1;
+        padding: 0;
+    }
+
+
+
+    .dobox{ width:500px;}
+
+
+    .f{
+        width: 250px;
+        height: 130px;
+    }
+    .f {
+        padding: 20px;
+        display: flex;
+        position: relative;
+        z-index: 2;
+        transform: translateX(-237px);
+        margin-top: 216px;
+    }
+    .fundrise {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        height: max-content;
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 80px;
+        flex-direction: column;
+    }
+    .f2 span{
+        font-size: 14px;
+    }
+    .f2 h4{
+        font-size: 14px;
+    }
+    .f2 p{
+        font-size: 14px;
+    }
+    .f2::after {
+        bottom: 10px;
+        height: 3px;
+    }
+    .f2::before {
+        bottom: 10px;
+        height: 3px;
+    }
+    .f h2 {
+        top: 47px;
+        font-size: 14px;
+    }
+    .f-list span{
+        font-size: 12px;
+    }
+    .num1,
+    .num2,
+    .num3{
+        font-size: 12px;
+    }
+    .overbox{
+        width: 280px;
+    }
+    .people img {
+        padding: 0;
+        width: 520px;
+        height: 500px;
+    }
+    .people{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .peoplebox1 {
+        width: 520px;
+    }
+    .peoplebox2 {
+        height: 520px;
+    }
+    .peoplebox2 h2{
+        margin-left: 10px;
+        transform: translateY(30px);
+    }
+    .peoplebox2 p {
+        font-size: 30px;
+        margin-left: 10px;
+        margin-top: 30px;
+    }
+    .peoplebox2 h3 {
+        margin-left: 10px;
+        transform: translateY(19px);
+    }
+    .peoplebox2 span{
+        width: 350px;
+        transform: translateY(10px);
+        flex-direction: column;
+    }
+    .peoplebox2 span i{
+        margin-bottom: 20px;
+    }
+    .eventbox1 p {
+        font-size: 25px;
+        transform: translateY(7px);
+    }
+    .eventbox1{
+        text-align: start;
+    }
+    .event{
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+    .eventbox1 h2 {
+        font-size: 29px;
+        margin-left: 10px;
+    }
+    .eventbox1 h3 {
+        font-size: 30px;
+        margin-left: 10px;
+        transform: translateY(-20px);
+    }
+    .eventlist ul li {
+        height: 100px;
+        margin: 20px;
+        width: 350px;
+    }
+    .eventlist {
+        flex-direction: column;
+        align-items: center;
+        width: max-content;
+    }
+    .calender{
+        height: 20px;
+        width: 20px;
+        font-size: 6px;
+    }
+    .eventcontent {
+        left: 50px;
+        width: 250px;
+        height: 100px;
+    }
+    .eventcontent h3 {
+        font-size: 12px;
+    }
+    .eventcontent h2 {
+        line-height: 10px;
+        font-size: 12px;
+        transform: translateY(-4px);
+    }
+    .eventcontent p {
+        line-height: 10px;
+        font-size: 12px;
+    }
+    .timing{
+        width: 50px;
+        height: 20px;
+        font-size: 7px;
+        right: 10px;
+    }
+    .eventlistbtn {
+        margin-left: 75px;
+        margin-top: 20px;
+        width:100px;
+        height: 30px;
+        font-size: 8px;
+    }
+    .insta ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: row;
+        margin-left: 7px;
+    }
+    .insta ul li img {
+        padding: 0;
+        width: 190px;
+        height: 170px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .insta5{
+        display: none;
+    }
+    footer{
+        width: 520px;
+    }
+    .footerbox{
+        width: 480px;
+        height: 120px;
+    }
+    .footerbox2{
+        width: 240px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        text-align: center;
+        transform: translateY(0px);
+    }
+    .footerbox1 {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        width: 150px;
+        height: 100px;
+        flex-direction: column;
+    }
+
+}
+
+/* end */
+
+::-webkit-scrollbar { width: 10px; height: 10px; }
+
+::-webkit-scrollbar-track{ background-color: hsl(0, 0%, 95%); }
+::-webkit-scrollbar-thumb{ background-color: var(--mycolor); }
+
+:root {
+    --font: "Poppins", sans-serif;
+    --font2: "Oswald", sans-serif;
+    --mycolor: rgb(207, 131, 45);
+}
